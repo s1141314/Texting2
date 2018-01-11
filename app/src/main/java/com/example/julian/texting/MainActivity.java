@@ -14,11 +14,14 @@ import android.webkit.*;
 
 public class MainActivity extends AppCompatActivity {
 
+    DatabaseHelper myDb;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    Button btn = (Button) findViewById(R.id.btnDoMagic);
+    Button btn = (Button) findViewById(R.id.button);
+    myDb = new DatabaseHelper(this);
 
         btn.setOnClickListener(new View.OnClickListener() {
             //@Override
@@ -26,9 +29,9 @@ public class MainActivity extends AppCompatActivity {
                 TextView textview = (TextView)findViewById(R.id.textview1);
                 textview.setText("diu");
 
-                WebView myWebView = (WebView) findViewById(R.id.webview);
-                WebSettings webSettings = myWebView.getSettings();
-                webSettings.setJavaScriptEnabled(true);
+                //WebView myWebView = (WebView) findViewById(R.id.webview);
+                //WebSettings webSettings = myWebView.getSettings();
+                //webSettings.setJavaScriptEnabled(true);
 
 
 
